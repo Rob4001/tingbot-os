@@ -4,12 +4,9 @@ compiler:
 cache:
   directories:
   - dl
-addons:
-  apt:
-    packages:
-    - qemu
-    - expect
-    - qemu-system-arm
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y qemu-arm-system expect
 script:
 - make build
 deploy:
