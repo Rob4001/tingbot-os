@@ -1,7 +1,9 @@
 language: c
 compiler:
 - clang
-- gcc
+cache:
+  directories:
+  - dl
 addons:
   apt:
     packages:
