@@ -5,7 +5,7 @@ compiler:
 addons:
   apt:
     packages:
-    - qemu-system-arm
+    - qemu
 script:
 - make build
 deploy:
