@@ -9,6 +9,7 @@ addons:
     packages:
     - qemu
     - expect
+    - qemu-system-arm
 script:
 - make build
 deploy:
