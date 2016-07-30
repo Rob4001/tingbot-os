@@ -1,0 +1,17 @@
+language: c
+compiler:
+- clang
+- gcc
+addons:
+  apt:
+    packages:
+    - qemu-system-arm
+script:
+- make build
+deploy:
+  provider: releases
+  api_key:
+    secure: AJMt+LnPSiC21vNIJ4AqZHmRBkLcwZ4j7sf4hwOueBvjschdQ6Z+zNmS+4oxlQ/6FKDV1++fhttQS2r8WVB5qNzniB0rbv7oIndgv+FWYhVvXfrtCVIPbaydgdUGrKFz1eQS8ijaEtjRMVs3O7rFvaQZS+w/2a8kwO7Gw7Y4FOfbHxZAPlQsoGb2e65HXlYvC3x38ph+4lYrQeCw3XeBg0+v1mxfJM+gCQc8sdYdtWLJXVDUDPvJHTY68/YRTqyj6pVWIYlPF3juNfe5bxiFZTY5ulxPjhLoymDfl0RD2w47pRXebm8adY0MylnXnCGy+qOpZSgJ1Zk0YG3YuwxvZLWfzfqm1sLaeFdNWa2iKawy43H/SMon3kuM6Dq2i1rmXsPd16FjqirAurASDUB2Pb4I3DC3kHsqApt6iKW8qrZ0waQFpwxC7lFjLXPkV424aHOIBxs89/05uEqJ55/iJsIZH+QJeCyah7eDSKgVlDoCpix27J6sXu6w0TUMNu09tO4W4e9u847BPQ1RazfrMmOl39p5xG7iALGVV5AELWNKsUkkWhTDa/GujssKI1SSh9yXE5lGkSzPbmlskJA/Ri2C+enuYxgI5c//WpM777PDSK9MF86FeKe9zcnqZpxQgPDD1PM4nQM+LLJfIYT1kTKhk58wknAzRDQbdVJcYPk=
+  file: build/disk.img.zip
+  on:
+    repo: Rob4001/tingbot-os
