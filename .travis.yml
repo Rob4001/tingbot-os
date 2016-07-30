@@ -8,6 +8,7 @@ addons:
   apt:
     packages:
     - qemu
+    - expect
 script:
 - make build
 deploy:
